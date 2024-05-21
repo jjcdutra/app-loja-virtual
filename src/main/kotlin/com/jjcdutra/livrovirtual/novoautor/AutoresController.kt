@@ -14,13 +14,13 @@ import org.springframework.web.bind.annotation.RestController
 class AutoresController(
     @PersistenceContext
     private val manager: EntityManager,
-    private val proibeEmailDuplicadoAutorValidator: ProibeEmailDuplicadoAutorValidator
+//    private val proibeEmailDuplicadoAutorValidator: ProibeEmailDuplicadoAutorValidator
 ) {
 
-    @InitBinder
-    fun init(binder: WebDataBinder) {
-        binder.addValidators(proibeEmailDuplicadoAutorValidator)
-    }
+//    @InitBinder
+//    fun init(binder: WebDataBinder) {
+//        binder.addValidators(proibeEmailDuplicadoAutorValidator)
+//    }
 
     @PostMapping("/autores")
     @Transactional
