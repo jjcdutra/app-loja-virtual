@@ -1,5 +1,6 @@
 package com.jjcdutra.livrovirtual.exception
 
+import org.postgresql.util.PSQLException
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.MethodArgumentNotValidException
@@ -24,5 +25,15 @@ class ControllerAdvice {
             }
         )
         return ResponseEntity(error, HttpStatus.UNPROCESSABLE_ENTITY)
+    }
+
+    @ExceptionHandler(PSQLException::class)
+    fun handlePSQLException(exception: PSQLException): ResponseEntity<ErrorResponse> {
+        val error = ErrorResponse(
+            httpCode = HttpStatus.BAD_REQUEST.value(),
+            message = "Valor já cadastrado no banco de dados"
+        )
+
+        return ResponseEntity(error, HttpStatus.BAD_REQUEST)
     }
 }
