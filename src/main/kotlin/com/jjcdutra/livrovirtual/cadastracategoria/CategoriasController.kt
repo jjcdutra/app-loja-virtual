@@ -1,4 +1,4 @@
-package com.jjcdutra.livrovirtual.novacategoria
+package com.jjcdutra.livrovirtual.cadastracategoria
 
 import jakarta.persistence.EntityManager
 import jakarta.persistence.PersistenceContext
@@ -9,16 +9,10 @@ import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class CategoriaController(
+class CategoriasController(
     @PersistenceContext
     private val manager: EntityManager,
-//    private val proibeEmailDuplicadoAutorValidator: ProibeEmailDuplicadoAutorValidator
 ) {
-
-//    @InitBinder
-//    fun init(binder: WebDataBinder) {
-//        binder.addValidators(proibeEmailDuplicadoAutorValidator)
-//    }
 
     @PostMapping("/categorias")
     @Transactional

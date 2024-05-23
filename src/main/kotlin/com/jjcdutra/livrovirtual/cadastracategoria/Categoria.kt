@@ -1,4 +1,4 @@
-package com.jjcdutra.livrovirtual.novacategoria
+package com.jjcdutra.livrovirtual.cadastracategoria
 
 import jakarta.persistence.*
 import jakarta.validation.constraints.NotBlank
