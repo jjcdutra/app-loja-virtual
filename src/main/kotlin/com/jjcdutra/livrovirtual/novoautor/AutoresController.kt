@@ -17,10 +17,7 @@ class AutoresController(
 //    private val proibeEmailDuplicadoAutorValidator: ProibeEmailDuplicadoAutorValidator
 ) {
 
-//    @InitBinder
-//    fun init(binder: WebDataBinder) {
-//        binder.addValidators(proibeEmailDuplicadoAutorValidator)
-//    }
+//    @InitBinder fun init(binder: WebDataBinder) {binder.addValidators(proibeEmailDuplicadoAutorValidator)}
 
     @PostMapping("/autores")
     @Transactional

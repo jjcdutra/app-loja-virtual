@@ -11,7 +11,6 @@ data class Categoria(
     val id: Long? = null,
 
     @field:NotBlank
-    @field:Column(unique = true)
     val nome: String
 ) {
     override fun toString(): String {

@@ -1,5 +1,8 @@
-package com.jjcdutra.livrovirtual.novoautor
+package com.jjcdutra.livrovirtual.validation
 
+import com.jjcdutra.livrovirtual.novoautor.Autor
+import com.jjcdutra.livrovirtual.novoautor.AutorRepository
+import com.jjcdutra.livrovirtual.novoautor.NovoAutorRequest
 import org.springframework.stereotype.Component
 import org.springframework.validation.Errors
 import org.springframework.validation.Validator

@@ -1,6 +1,6 @@
 package com.jjcdutra.livrovirtual.novoautor
 
-import com.jjcdutra.livrovirtual.validation.EmailAvailable
+import com.jjcdutra.livrovirtual.validation.UniqueValue
 import jakarta.validation.constraints.Email
 import jakarta.validation.constraints.NotBlank
 import jakarta.validation.constraints.Size
@@ -11,7 +11,7 @@ data class NovoAutorRequest(
 
     @field:NotBlank
     @field:Email
-    @field:EmailAvailable
+    @field:UniqueValue(domainClass = Autor::class, fieldName = "email")
     val email: String,
 
     @field:NotBlank
